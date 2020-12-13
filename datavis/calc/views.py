@@ -344,7 +344,6 @@ def addViewer(request):
     addCell('show')
     return redirect('/')
 
-
 def addTransformer(request):
     addCell('transformer')
     return redirect('/')
