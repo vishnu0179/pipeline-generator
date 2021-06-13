@@ -1,0 +1,43 @@
+body {
+    background-color: #f8f8f8;
+}
+
+.dz {
+    border: dashed ;
+    border-color: #ccc;
+    border-radius: 10px ;
+}
+
+.dz:hover {
+    background-color: aliceblue ;
+}
+
+.cell {
+    border-style: solid !important;
+    border-color: black !important;
+    border-width: 1px !important;
+    
+}
+
+.outer-cell {
+    background-color:#868484;
+    color: white;
+}
+
+.btn-dark {
+    background-color: #393939;
+}
+
+.input-bg {
+    background-color: #c4c4c4;
+}
+
+.icon {
+    color: gray !important; 
+    font-size:22px !important;
+}
+
+svg {
+    width: unset;
+    height: unset;
+}

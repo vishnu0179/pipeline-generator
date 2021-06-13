@@ -1,0 +1,42 @@
+<div class="cell m-2 " style=" background-color:#868484;">
+    <div class="row m-2">
+        <div class="col-md-12 ">
+            <form action="/exec/joiner" method="POST" style="display: flex; justify-content: space-between">
+                {% csrf_token %}
+                <div style="display: inline;">
+                    <label for="varname-exporter">Choose Variable: </label>
+                    <select name="varname" id="varname-exporter" class="input-bg">
+                        {% for var in varlist %}
+                            {% if var == cell.data.varname %}
+                            <option value="{{ var }}" selected>{{ var }}</option>
+                            {% else %}
+                            <option value="{{ var }}">{{ var }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+                <div style="display: inline;">
+                    <label for="varname-exporter">Choose Variable: </label>
+                    <select name="varname-2" id="varname-exporter" class="input-bg">
+                        {% for var in varlist %}
+                        {% if var == cell.data.varname2 %}
+                        <option value="{{ var }}" selected>{{ var }}</option>
+                        {% else %}
+                        <option value="{{ var }}">{{ var }}</option>
+                        {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+                <div style="display: inline;">
+                    <label for="filename"></label>
+                    <input type="text" placeholder="New Variable Name" value="{{ cell.data.new_varname }}"
+                        name="new_varname">
+                </div>
+                <div>
+                    <input type="hidden" value="{{ cell.name }}" name="cellname">
+                    <button type="submit">Join</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
